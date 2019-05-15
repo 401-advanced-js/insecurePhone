@@ -53,7 +53,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         <Text style={styles.header}>
-          Insecure GF
+          Insecure Phone
           </Text>
         <TextInput
           style={styles.textInput}
@@ -64,8 +64,11 @@ export default class App extends React.Component {
         <Text>
           Your name: {this.state.name}
         </Text>
-        <Button onPress={this.giveAttention} title="Give Attention" />
-        <Button onPress={this.breakUp} title="Break up with this hoe" />
+        <Text style={styles.button1} onPress={this.giveAttention}>
+          Give Them Attention
+        </Text>
+        {/* <Button onPress={this.giveAttention} title="Give Attention" /> */}
+        <Button onPress={this.breakUp} title="Break Up With Them" />
       </View >
     );
   }
@@ -89,4 +92,28 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
   },
+  button1: {
+    // width: 200,
+    // height: 200 - 200/10,
+    lineHeight: 200,
+    // alignItems: 'center',
+    borderColor: 'black',
+    borderRadius: 100,
+    borderWidth: 20,
+    backgroundColor: '#f74d4d',
+    fontSize: 20,
+    color: 'white',
+    
+    // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569)),
+    
+    //  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%,'#f74d4d'), color-stop(100%,#f86569)),
+    
+    // box-shadow: 0 15px #e24f4f,
+
+    // &:active {
+    //   box-shadow: 0 0 #e24f4f,
+    //   .translate(0px, 15px),
+    //   .transition( 0.1s all ease-out),
+    // }
+}
 });
